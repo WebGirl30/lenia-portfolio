@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Campus Eats</title>
+    <link rel="stylesheet" href="campus_food_app_style.css">
+</head>
+<body>
+    <main class="app">
+
+        <section id="loginScreen" class="screen active">
+            <div class="login-card">
+
+                <div class="login-logo">
+
+                   <img src="logo.png" alt="Campus Eats Logo">
+
+                    <div class="logo-text">Campus Eats</div>
+
+                </div>
+
+                <label for="roleSelect">Account Type</label>
+
+                <select id="roleSelect">
+
+                    <option value="student">Student</option>
+                    <option value="employee">Employee</option>
+                    <option value="vendor">Vendor</option>
+
+                </select>
+
+                <label for="username">Username</label>
+                <input id="username" type="text" placeholder="Enter username" />
+
+                <label for="password">Password</label>
+                <input id="password" type="password" placeholder="Enter password" />
+
+                <p class="forgot">Forgot password?</p>
+                <div class="button-row">
+                    <button id="signupBtn" class="secondary">Sign Up</button>
+                    <button id="loginBtn">Login</button>
+                </div>
+                <p id="loginMessage" class="message"></p>
+
+            </div>
+
+        </section>
+
+        <section id="homeScreen" class="screen">
+            <header class="topbar">
+
+                <div class="top-left">
+
+                    <img src="logo.png"
+                         alt="Campus Eats Logo"
+                         class="top-logo">
+
+                    <div>
+
+                        <h2 id="welcomeText">
+                            Welcome, Student
+                        </h2>
+
+
+                    </div>
+
+
+                    <p>Meal Card Balance: <strong id="balanceText">$100.00</strong></p>
+                </div>
+                <button id="logoutBtn" class="logout">Logout</button>
+
+            </header>
+
+            <input id="mainSearch" class="search" type="search" placeholder="Search..." />
+
+            <nav class="tabs">
+                <button class="tab active" data-tab="menu">Menu</button>
+                <button class="tab" data-tab="ordering">Ordering</button>
+                <button class="tab" data-tab="status">Order Status</button>
+                <button class="tab" data-tab="support">Support</button>
+            </nav>
+
+            <section id="menu" class="tab-panel active">
+                <h3>Menu Page</h3>
+                <input class="search" type="search" placeholder="Search menu..." />
+                <div class="special">Today’s Special: Chicken Wrap - $6.50</div>
+                <div class="days">
+                    <span>Mon.</span><span>Tues.</span><span>Wed.</span><span>Thurs.</span><span>Fri.</span><span>Sat.</span>
+                </div>
+                <div class="cards">
+                    <div class="card"><h4>Breakfast 9AM - 11AM</h4><p>Pancakes, fruit cup, breakfast sandwich</p><strong>Prices: $2.00 - $5.00</strong></div>
+                    <div class="card"><h4>Lunch</h4><p>Pizza, burger, chicken wrap, salad</p><strong>Prices: $5.00 - $8.00</strong></div>
+                    <div class="card"><h4>Snacks</h4><p>Apple, chips, granola bar</p><strong>Prices: $1.00 - $3.00</strong></div>
+                </div>
+            </section>
+
+            <section id="ordering" class="tab-panel">
+                <h3>Ordering</h3>
+                <div class="category-row">
+                    <button class="category active">Breakfast</button>
+                    <button class="category">Lunch</button>
+                    <button class="category">Drinks</button>
+                    <button class="category">Snacks</button>
+                </div>
+                <input class="search" type="search" placeholder="Search food..." />
+                <div id="foodGrid" class="food-grid"></div>
+                <aside class="cart-box">
+                    <h4>Cart</h4>
+                    <ul id="cartList"></ul>
+                    <p>Total: <strong id="cartTotal">$0.00</strong></p>
+                    <button id="checkoutBtn">Checkout</button>
+                    <p id="checkoutMessage" class="message"></p>
+                </aside>
+            </section>
+
+            <section id="status" class="tab-panel">
+
+                <h2>Order Status</h2>
+
+                <div id="orderStatusContainer"></div>
+
+            </section>
+
+            <section id="support" class="tab-panel">
+    <h3>Support Page</h3>
+
+    <div class="support-grid">
+
+        <div class="support-card" id="callSupportBtn">
+            <img src="phone icon.png">
+            <p>Call Support</p>
+        </div>
+
+        <div class="support-card" id="liveChatBtn">
+            <img src="chat icon.png">
+            <p>Live Chat</p>
+        </div>
+
+        <div class="support-card" id="faqBtn">
+            <img src="questions icon.png">
+            <p>Frequently Asked Questions</p>
+        </div>
+
+    </div>
+
+    <div id="supportContent" class="card" style="margin-top:20px; display:none;">
+    </div>
+
+</section>                
+    
+
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
